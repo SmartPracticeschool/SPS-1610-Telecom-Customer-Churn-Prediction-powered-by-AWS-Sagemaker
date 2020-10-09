@@ -43,9 +43,9 @@ def index():
             'https://fuhejtpfta.execute-api.us-east-1.amazonaws.com/finalstage/churn',
             data=j)
         if r.text == '1':
-            res = "Yes"
+            res = "Yes, the customer will churn"
         else:
-            res = "No"
+            res = "No, the customer won't churn"
         print(r.text)
         return render_template("result.html",res=res)
         
